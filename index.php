@@ -1,6 +1,8 @@
 <?php 
-include 'function.php';
+session_start();
+include __DIR__ . '/functions.php';
 $user_pass=$_GET["quantity"];
+$_SESSION["userpassword"]=  randomPassword($user_pass);
 
 
 
@@ -20,11 +22,10 @@ $user_pass=$_GET["quantity"];
     <body>
         <form action="index.php" method="get">
             <label for="quantity">Scegli la lunghezza della tua password(minimo 3 caratteri):</label>
-            <input type="number" name="quantity" id="quantity" min="5">
-            <button type="submit">Genera la password</button>
+            <input type="number" name="quantity" id="quantity" min="5" max="15">
+            <button type="submit" >Genera la password</button>
+            <a href="userPassword.php">Scopri la tua password</a>
         </form>
-        <div>
-            <h2>Questa è la tua Password:<?php echo randomPassword($user_pass) ?></h2>
-        </div>
+        
     </body>
 </html>

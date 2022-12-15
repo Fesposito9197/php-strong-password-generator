@@ -1,4 +1,5 @@
 <?php
+session_start();
 function randomPassword($user_pass) {
     $alphabet="ABCDFGHILMNOPQRSTUVZXYabcdfghilmnopqrstuvzxyz12345678910#?&!";
     $pass = array(); 
