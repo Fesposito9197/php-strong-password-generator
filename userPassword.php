@@ -16,7 +16,7 @@ session_start();
     </head>
     <body>
         <div>
-            <h2>Questa è la tua Password:<?php $_SESSION["userpassword"] ?></h2>
+            <h2>Questa è la tua Password:<?php echo $_SESSION["userpassword"] ?></h2>
         </div>
     </body>
 </html>
